@@ -1,27 +1,29 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Background</title>
+    <title>Video Background</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: black;
+            overflow: hidden;
         }
-        iframe {
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://www.youtube.com/embed/iY9pm-hFbbI?autoplay=1&loop=1&playlist=iY9pm-hFbbI&start=1" allow="autoplay; fullscreen"></iframe>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iY9pm-hFbbI?playlist=iY9pm-hFbbI&loop=1&autoplay=1&controls=0&mute=1&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
 </body>
 </html>
